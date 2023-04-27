@@ -1,0 +1,42 @@
+Ques - What is emmet?
+Ans - It is a vs code plugin for faster development. It takes the abbreviations
+or small expressions and dynamically converts them into full code.
+This plugin can ace our js,html,css,react development. 
+For exmaple :
+Just by typing html:5 in .html file we can get a HTML5 structure.
+
+Ques - Difference between library and framework?
+Ans - A framework is fully flegged which means it has all the necessary pre defined 
+libararies for it to work on the other hand a library depends on external packages 
+for some of it functionality.
+For example:
+React uses reactRouter(external package) for navigation while
+angular has built in navigation.
+
+Ques - What is cdn?Why do we use it?
+Ans - Cdn stand for Content Delivery Network.The name itselfs explains a bit that the goal
+is to deliever the content securely in fastest,cheapest way. When lot of users access a particular
+content at the same time the web page gets crashes so to avoid this cdn is used. It basically
+caches the content and stores in the nearest network point so that all the load is 
+distributed from a single server and the server can also works effectively.
+Advantages of using cdn is it improves websites loading time due to contribution of data,
+bandwidth reduction costs, content is easily avaialable and finally security.
+
+Ques - What is cross-origin in the script tag?
+Ans - When we want to access the content which is from different domain (the content is hosted on
+different server) we need cross-origin attribute.
+
+Ques - What is the difference between react.development.js and react.production.js files
+via CDN?
+Ans - The first one is used for development purpose. It has hot reloading feature or live debugging
+while the latter one does'nt have anything like this because it's purpose is to give
+clean, optimised, minified build. When the app is live we want our app to work smoothly and fast.
+
+Ques - What are async and defer?
+Ans - These are attributes used in script tag. When a web page loads 2 things happen - HTML parsing and
+& Loading of Scripts(fetching ad executing).When we use async attribute scripts are fetched asynchronously
+from network in parallel with HTML parsing. As soon as they are fetched, they are executed while
+the parsing is paused. And when the execution of scripts are completed the parsing continues.
+In defer attribute both the HTML Parsing and scripts fetching occurs in parallel. All the script are executed
+onlu after HTML Parsing is completed. Defer attribute maintains the order of scripts whileasync doesn't.  
+
