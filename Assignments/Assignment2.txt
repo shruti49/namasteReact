@@ -1,0 +1,36 @@
+Ques - What is npm?
+Ans - It is a database of all the external packages. It consits of 
+command-line tools to install those packages and manage their dependencies.
+
+Ques - What is 'parcel/webpack'? Why do we need it?
+And - Parcel/Webpack is a bundler.It is powerpacked with all the good features 
+like optimisation, minification, compression of code. It helps in easier development.
+It has hot reloading , caching.
+
+Ques - What is .parcel-cache?
+And - When we create a build using parcel build command it stores information about the project
+in this folder so that when it rebuilds, it doesn't have to re-parse and 
+re-analyze everything from scratch.
+
+Ques - What is npx?
+Ans - It consits of command-line tools for executing the packages.
+
+Ques - Difference between devDependencies vs dependencies?
+Ans - Packages required by your application in production are dependencies. 
+While packages that are only needed for local development and testing are devDependencies.
+
+Ques - What is Tree Shaking?
+Ans - Removal of unused code from app is called tree Shaking.Help in increasing performance.
+
+Ques - What is Hot Module Replacement?
+Ans - It just replaces the updated code only and doesn't refresh the whole page while 
+the application is running.This can significantly speed up development in a few ways:
+
+- Retain application state which is lost during a full reload.
+- Save valuable development time by only updating what's changed.
+- Instantly update the browser when modifications are made to 
+    CSS/JS in the source code, which is almost comparable to
+    changing styles directly in the browser's dev tools.
+
+
+Ques - 
