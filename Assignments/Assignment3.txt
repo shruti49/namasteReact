@@ -1,0 +1,18 @@
+Ques - What is JSX?
+Ans - It is javascript syntax extension which help us to write html like markup inside javascript.
+React code can be written using React.createElement but it becomes too complex for large scale
+apps tha's why jsx came into existence.
+
+Ques - Superpowers of JSX?
+Ans - Component Composition, Element Composition,Code readability,increase performance,we can also add
+dynamic js using curly braces
+
+Ques -  Role of type attrbutes in script tag.What else i can use there?
+Ans - It indicates the type of script tag.It can be set to empty string which represnts the default type which 
+is normal js, modules type which treats the code as js module and importmap which indicates that the
+body of the element contains importmap.
+
+Ques - <TitleComponent></TitleComponent> vs <TitleComponent/> vs {TitleComponent}?
+And - Both are same.Both will render same Component.Ony difference is when to use which one.
+If we want other ele or component to render inside that component then we should go with first one else
+second one.Curly braces allow us to write javascript inside JSX.
