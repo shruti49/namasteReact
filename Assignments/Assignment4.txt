@@ -1,0 +1,46 @@
+Ques - Is JSX mandatory for React?
+And - No, we can also write React using React.createElement but because it becomes too complex in 
+large scale apps hence JSX came.
+
+Ques - Is ES6 mandatory for React?
+Ans - No, because React components can also be written using create-react-class module but because 
+it becomes too complex and for peformance optimisations, code readability in large scale apps hence ES6 came.
+
+Ques - How can I write comments in JSX?
+Ans -  {/* comments */}
+
+Ques - What is <React.Fragment></React.Fragment> & <></>?
+Ans - Both are same. When we don't want to add another container/wrapper in the DOM we use fragments.They 
+are used to group elements togther without affecting DOM.
+
+Ques - What is Virtual DOM?
+Ans - It is a copy of orignal DOM. And original DOM is just object representation
+of HTML elements(UI) grouped togther. 
+
+Ques - What is Reconciliation in react?
+Ans - We know DOM manipulation is very expensive. Reconciliation is a process where react compares the 
+state of previous virtual dom with the new virtual dom and then updates only that part in 
+original dom where the state has been changed. React becomes faster because of this process.
+
+Ques - What is React Fibre?
+Ans - Introduced in react 16. New implementation of older react reconsiliation algo.
+
+
+Ques - Why do we need keys in react?
+Ans - Keys are basically used when we render a list. Suppose we have a list of cards without keys and we have changed the state of few cards.
+(changing the background color) I will reorder those cards. Since cards does not have keys react will treat them same and after reordering
+it will change the state of other cards. (React will compare both the old and new virtual dom and when it doesn't find keys it will unmount the
+old list , mount a new list and then renders it without exactly knowing the cards whoese state has been changed.)
+
+
+Ques - Can we use index as keys?
+Ans - Yes we can but it is bad practise. React recommends that we should do not use indexes as keys, 
+since it could impact performance negatively and could lead to some unstable component behaviour. 
+When we do not have external ids React uses index as keys. 
+
+
+Ques - What are props in react?
+Ans - Props are propertiese(normal args) which are being passed from parent to child component.
+
+Ques - What is Config driven UI?
+Ans - Controlling UI based on data given by backend.

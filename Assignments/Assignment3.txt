@@ -13,6 +13,14 @@ is normal js, modules type which treats the code as js module and importmap whic
 body of the element contains importmap.
 
 Ques - <TitleComponent></TitleComponent> vs <TitleComponent/> vs {TitleComponent}?
-And - Both are same.Both will render same Component.Ony difference is when to use which one.
-If we want other ele or component to render inside that component then we should go with first one else
-second one.Curly braces allow us to write javascript inside JSX.
+And - All are same. All will render same Component. Ony difference is when to use which one.
+If we want other element or component to render inside that component then we should go with first one else
+second one. Curly braces allow us to write javascript inside JSX.
+Exmaples - 
+<TitleComponent>
+<Child/>
+</TitleComponent>
+
+<TitleComponent attrbutes/>
+
+const TitleComponent = "hey";

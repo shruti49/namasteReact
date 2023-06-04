@@ -1,0 +1,20 @@
+Ques - What is the difference between Named Export, Default Export and * as export?
+Ans - Export default returns only a single value or default value.
+When we want to export multiple values from a single file we used named exports.
+When we want to export everything from the file we use * and also give a namespace (* as myModule)
+
+Ques - What is the importance of config.js file?
+Ans - Config file short form for Configuration file contains a list of initial parameters and settings your project will need to get started.
+It could be anything, like a connection string to the database URL in different development environments, language settings, 
+user settings, etc.
+
+Ques - What are React Hooks?
+Ans - React hooks are normal Js functions that enable us to use React functionalities like state and lifecycle features 
+without using classes.. We can't call them inside loops or conditions . they should always be decalred at the top level.
+
+
+Ques - Why do we need a useState Hook?
+Ans - We can't use normal js variables in react because react does not re-render after updating the values of normal vars.
+React uses state variables which are provided by useState hook. This hook returns an array with 2 values -
+an initial state and the method to update that initial state. Once the value is updated it triggers re-render which is not possible in
+normal js variable. The useState hook takes a default value as an initial param.

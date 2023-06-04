@@ -16,3 +16,7 @@
 - HTTPs
 - Tree Shaking - remove unsused code
 - Different dev & prod build
+
+# 2 most important hooks
+- useState()
+- useEffect()

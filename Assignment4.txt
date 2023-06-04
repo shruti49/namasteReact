@@ -1,7 +1,0 @@
-Ques - Is JSX mandatory for React?
-And - No, we can also write React using React.createElement but because it becomes too complex in 
-large scale apps hence JSX came.
-
-Ques - Is ES6 mandatory for React?
-Ans - No, because React components can also be written using create-react-class module but because 
-it becomes too complex and for peformance optimisations, code readability in large scale apps hence ES6 came.
