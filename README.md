@@ -20,3 +20,12 @@
 # 2 most important hooks
 - useState()
 - useEffect()
+  
+
+# Optimisations - Making code into smaller logical chunks/ Smaller applications within big application
+- Dynamic Bundling
+- Code Splitting
+- Chunking
+- Lazy Loading
+- On demand Loading
+- Dynamic Import

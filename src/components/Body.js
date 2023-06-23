@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
+import useOnlineStatus from "../../utils/useOnlineStatus";
+
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);
 
@@ -11,6 +13,7 @@ const Body = () => {
 
   const [searchedValue, setSearchedValue] = useState("");
 
+  // console.log(useState());
   const handleClick = () => {
     const filteredList = restaurantList.filter(
       (resData) => resData.data.avgRating > 4
@@ -42,6 +45,12 @@ const Body = () => {
     }
   };
 
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) {
+    return <h1>Looks like you are offline.Check your internet connection</h1>;
+  }
+
   if (restaurantList.length === 0) {
     return <Shimmer />;
   }
@@ -70,7 +79,6 @@ const Body = () => {
           <Link to={`/restaurants/${resData.data.id}`} key={resData.data.id}>
             <RestaurantCard resData={resData} />
           </Link>
-          // <RestaurantCard resData={resData} key={resData.data.id}/>
         ))}
       </div>
     </div>

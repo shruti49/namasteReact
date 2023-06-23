@@ -1,0 +1,23 @@
+Ques - How do you create nested routes  react-router-dom configuration?
+Ans -
+
+Ques - createHashRouter and createMemoryRouter 
+Ans -
+
+Ques - Order of lifecycle methods called in class based component?
+Ans -
+
+Ques - Why do we use componentDidMount?
+Ans -
+
+
+Ques - Why do we use componentWillUnmount?
+Ans -
+
+
+Ques - Why do we use super(props) in constructor?
+Ans -
+
+
+Ques - Why can't we have the callback function of useEffect async?
+Ans -

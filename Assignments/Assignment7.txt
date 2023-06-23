@@ -1,0 +1,17 @@
+Ques - What are various ways to add images into our app.Explain with examples.
+Ans - 
+
+Ques - What would happen if we do console.log(useState());
+Ans - useState() returns a an array of 2 elements.First is undefined and second is a function.
+
+Ques - How will useEffect behave if we don't add a dependency array?
+Ans - Our component will render everytime there's change in any state . Adding an empty dependency array, useEffect
+will be called on initial render . And if we something in dependency array then it will render only when that
+dependency changes.
+
+Ques - What is SPA?
+Ans - Single Page Web Application.  We can route from one page to another another without pages being loaded
+refreshed.There is only a single html page with root id and everything else is a component.
+
+Ques - What is difference between Client Side Routing and Server Side Routing?
+Ans - 

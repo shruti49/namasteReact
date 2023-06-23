@@ -38,5 +38,5 @@ Ans - These are attributes used in script tag. When a web page loads 2 things ha
 from network in parallel with HTML parsing. As soon as they are fetched, they are executed while
 the parsing is paused. And when the execution of scripts are completed the parsing continues.
 In defer attribute both the HTML Parsing and scripts fetching occurs in parallel. All the script are executed
-onlu after HTML Parsing is completed. Defer attribute maintains the order of scripts whileasync doesn't.  
+only after HTML Parsing is completed. Defer attribute maintains the order of scripts while async doesn't.  
 
