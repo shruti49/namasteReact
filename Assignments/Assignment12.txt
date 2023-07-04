@@ -1,0 +1,20 @@
+Ques - useContext vs redux
+Ans-
+
+Ques - Pros of using redux toolkit over redux
+Ans-
+
+Ques - Explain Dispatcher.
+Ans-
+
+Ques - Explain reducer.
+Ans-
+
+Ques - Explain slice.
+Ans-
+
+Ques - Explain selector.
+Ans-
+
+Ques - Explain createSlice and the config it takes.
+Ans-

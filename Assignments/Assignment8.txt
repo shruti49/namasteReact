@@ -1,18 +1,49 @@
-Ques - How do you create nested routes  react-router-dom configuration?
+Ques - How do you create nested routes react-router-dom configuration?
 Ans -
 
 Ques - createHashRouter and createMemoryRouter 
 Ans -
 
 Ques - Order of lifecycle methods called in class based component?
-Ans -
+Ans - There are 3 lifecycle methods.
+Mounting , Updating,Unmounting
+
+Mounting has 2 phases - Render Phase and Commit Phase 
+In render phase the constructor is called whenever an instance of class is created. And then the component
+renders initially. 
+Before commit phase react uses a reconciliation algo which has a diff techniue to figure out 
+all the updates in virtual DOM. After that comes the commit phase where the Orginal DOM is then updated 
+and then component is mounted with (componentDidMount method)
+
+Updating - This methods ocuurs subsequently whenever there's an update in the state of the component. 
+As soon as the state is updated the components re-renders. Then actul DOM updation occurs and the 
+components gets updated with (componentDidUpdate method) 
+
+Unmounting - This methods occurs whenever the component is removed from the page. (routing to another component);
+(componentWillUnmount)
 
 Ques - Why do we use componentDidMount?
-Ans -
+Ans - The componentDidMount() method allows us to execute the React code when 
+the component is already placed in the DOM (Document Object Model). 
+This method is called during the Mounting phase of the React Life-cycle i.e 
+after the component is rendered.
+
+All the AJAX requests and the DOM or state updation should be coded in the 
+componentDidMount() method block. We can also set up all the major 
+subscriptions here but to avoid any performance issues, always remember to 
+unsubscribe them in the componentWillUnmount() method. 
 
 
 Ques - Why do we use componentWillUnmount?
-Ans -
+Ans - Whenever we want to destroy/unmount any component we use componentWillUnmount() to perfor
+all the cleanup functions.
+This method is called during the Unmounting phase of the React Life-cycle i.e
+ before the component gets unmounted.
+
+
+All the cleanups such as invalidating timers, canceling network requests, 
+or cleaning up any subscriptions that were created in componentDidMount() 
+should be coded in the componentWillUnmount() method block.
 
 
 Ques - Why do we use super(props) in constructor?
@@ -21,3 +52,8 @@ Ans -
 
 Ques - Why can't we have the callback function of useEffect async?
 Ans -
+
+Ques - How to Redirect a User After Login in React
+Ans - useNavigate hook from react-route-dom.
+const navigate = useNavigate();
+navigate("/dashboard")

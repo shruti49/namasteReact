@@ -1,5 +1,24 @@
 Ques - What are various ways to add images into our app.Explain with examples.
-Ans - 
+Ans -  4 ways
+1) Use the import keyword - This ensures that when the project is built, 
+webpack will move the images into the build folder and provide you with correct paths.
+Example - 
+IMPORTING - import house from "./house.jpg"
+USING - <img src={house} width={200} height={200}/>
+
+2) Use the require keyword 
+Example - No importing
+USING  - <img src={require('./house.jpg)} alt="House img"/>
+
+3) Import SVGs directly as a React component
+Example -
+IMPORTING - import {ReactComponent as Logo} from "./logo.svg"
+USING - <Logo />
+
+4) Load images directly from the network
+Example - No importing
+USING - <img src="https://square.jpg" />
+
 
 Ques - What would happen if we do console.log(useState());
 Ans - useState() returns a an array of 2 elements.First is undefined and second is a function.

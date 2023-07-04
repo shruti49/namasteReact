@@ -1,0 +1,11 @@
+Ques - What is prop drilling?
+Ans -
+
+Ques - What is lifting the state up?
+Ans -
+
+Ques - What are Context Provider and context Consumer?
+Ans -
+
+Ques - If we don't pass a value to the provider does it take a default value?
+Ans -

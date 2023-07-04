@@ -1,0 +1,11 @@
+Ques - Explore all the ways of writing css.
+Ans -
+
+Ques - How do we configure tailwind?
+Ans -
+
+Ques - In tailwind.config.js, what does all the keys mean(content,theme,extend,plugins)?
+Ans -
+
+Ques - Why do we have .postcssr file?
+Ans -

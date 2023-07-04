@@ -26,10 +26,60 @@ Ques - What is Hot Module Replacement?
 Ans - It just replaces the updated code only and doesn't refresh the whole page while 
 the application is running.This can significantly speed up development in a few ways:
 
+Ques - 5 superpowers of parcel and describe any 3
 - Retain application state which is lost during a full reload.
 - Save valuable development time by only updating what's changed.
 - Instantly update the browser when modifications are made to 
     CSS/JS in the source code, which is almost comparable to
     changing styles directly in the browser's dev tools.
+
+Ques - What is '.gitignore'? What should we add and not add in it?
+Ans - The . gitignore file tells Git which files to ignore when committing our project 
+to the GitHub repository. gitignore is located in the root directory of our repo.
+ Node modules, folders created by parcel or webpack , .env file for security purpose when we don't want
+other devs to use it.
+
+Ques - Difference between package.json and package.lock.json.
+Ans - package.json is a versioning file used to install multiple packages in our project. 
+It contains metadata/configuration about the project and also the functional dependencies that is 
+required by the application.
+    package.lock.json - To install exact latest version of any package/dependencies into our 
+    project we need to save this file on github.
+
+Ques - What are node modules? Is it ok to push them on git?
+Ans - Our project need some dependencies and those dependencies need further more dependencies
+to run the code. Therefor node modules are basically these dependencies or we can call them packages
+as well. All the main packages which we need in our project are written in package.json file.
+
+Ques - What is the dist folder?
+Ans - dist folder is created by parcel bundler. Whenever we run our app in dev mode parcel  
+compressess all our JS code into one js file, css code into one css file.
+
+Ques - what is browsersList?
+Ans - It tells whether the app is compatible with the browser or not. It taske an array.
+Exmaple - Will definitely work on these versions
+["Last 2 chrom Versions",
+"Last 2 firefox versions]
+
+Ques - Caret and tilda
+Ans -  The syntax of the npm version looks like the following.
+Major.Minor.Patch
+
+Tilde (~) notation: 
+It is used to match the most recent patch version. 
+Tilde ~ notation freezes the major version and minor version.
+ As we know patch updates are bug fixes that’s why we can say ~ notation allows us to 
+ automatically accept bug fixes.
+Example: The ~1.2.0 will update all the future patch updates. We have to write just ~1.2.0 and 
+all the next patch update dependencies. For example, 1.2.1, 1.2.2, 1.2.5……………1.2.x.
+Note: Patch updates are very small security changes in a package that is why the ~version is 
+approximately equivalent to the version.
+
+Caret (^) notation: 
+It is used for automatically updating the minor updates along with patch updates. 
+Example: The ^1.2.4 will update all the future Minor and patch updates, for example, ^1.2.4 will automatically 
+change the dependency to 1.x.x if any update occurs. 
+Using caret notation it is important to look at our code regularly if it is compatible 
+with the newest version or not.
 
 

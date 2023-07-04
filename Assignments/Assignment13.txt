@@ -1,0 +1,11 @@
+Ques - What are the different types of testing?
+Ans -
+
+Ques - What is Enzyme?
+Ans-
+
+Ques - Enzyme vs react testing library?
+Ans-
+
+Ques - What is Jest and why do we use it?
+Ans-
