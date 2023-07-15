@@ -6,7 +6,12 @@ import Shimmer from "./Shimmer";
 
 import useOnlineStatus from "../../utils/useOnlineStatus";
 
+import PromotedHOC from "../../utils/PromotedHOC";
+
 const Body = () => {
+  //HOC
+  const PromotedRestaurantCard = PromotedHOC(RestaurantCard);
+
   const [restaurantList, setRestaurantList] = useState([]);
 
   const [filterdRestaurant, setFilteredRestaurant] = useState([]);
@@ -82,9 +87,13 @@ const Body = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-between m-4">
-        {filterdRestaurant.map((resData) => (
-          <Link to={`/restaurants/${resData.data.id}`} key={resData.data.id}>
-            <RestaurantCard resData={resData} />
+        {filterdRestaurant.map((restaurant) => (
+          <Link to={`/restaurants/${restaurant.data.id}`} key={restaurant.data.id}>
+            {restaurant.data.promoted ? (
+              <PromotedRestaurantCard resData={restaurant} />
+            ) : (
+              <RestaurantCard resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
