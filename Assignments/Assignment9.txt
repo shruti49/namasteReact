@@ -38,8 +38,10 @@ React being very fast tries to render the component even before it's code is loa
 component it suspends the rendering process and threw this error.And to handle that state we use SUSPENSE.
 
 Ques - Pros and cons of code splitting pattern.
-Ans - Increases the performance by making our app faster , better user experince
+Ans - Increases the performance by making our app faster , better user experince, light weight,optimised.
+If you choose too many split points, you may end up with too many small chunks that increase the 
+overhead of network requests and reduce the benefits of caching.  so many loading indicators on slow network;
 
 Ques - When and why do we need suspense?
 Ans - Suspense basically shows a fallback screen or we can say a loading indicator between that time stamp from where the component's code
-is loaded till it is fully rendered. We can pass a shimmer UI.
+is loaded till it is fully rendered. We can pass a shimmer UI. In order to show example use throttling.
