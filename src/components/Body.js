@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import RestaurantCard from "./RestaurantCard";
@@ -7,8 +7,13 @@ import Shimmer from "./Shimmer";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 
 import PromotedHOC from "../../utils/PromotedHOC";
+import UserContext from "../context/UserContext";
 
 const Body = () => {
+
+  //context
+  const { loggedInUser, setUserName } = useContext(UserContext);
+
   //HOC
   const PromotedRestaurantCard = PromotedHOC(RestaurantCard);
 
@@ -60,6 +65,8 @@ const Body = () => {
     return <Shimmer />;
   }
 
+
+
   return (
     <div className="body">
       <div className="filter flex items-center">
@@ -85,10 +92,21 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
+        <div className="search m-4 p-4">
+          <input
+            type="text"
+            className="border border-black"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
       </div>
-      <div className="flex flex-wrap justify-between m-4">
+      <div className="flex flex-wrap m-4">
         {filterdRestaurant.map((restaurant) => (
-          <Link to={`/restaurants/${restaurant.data.id}`} key={restaurant.data.id}>
+          <Link
+            to={`/restaurants/${restaurant.data.id}`}
+            key={restaurant.data.id}
+          >
             {restaurant.data.promoted ? (
               <PromotedRestaurantCard resData={restaurant} />
             ) : (

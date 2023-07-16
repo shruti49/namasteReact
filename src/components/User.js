@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import UserContext from "../context/UserContext";
 
 const User = (props) => {
   const { name, location, contact } = props.user;
 
   const [count, setCount] = useState(0);
   // const [count2] = useState(1);
+
+  const {loggedInUser} = useContext(UserContext);
 
   useEffect(() => {
     console.log("useEffect Called without dependency array");
@@ -20,7 +23,7 @@ const User = (props) => {
 
   return (
     <div className="user-card">
-      <h2>Name: {name}</h2>
+      <h2>Name: {loggedInUser}</h2>
       <h3>Location: {location}</h3>
       <h4>Contact: {contact}</h4>
 

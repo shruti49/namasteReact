@@ -4,8 +4,8 @@
 const PromotedHOC = (Card) => {
   return (props) => {
     return (
-      <div className="absolute m-1 p-1 rounded-lg bg-black text-white">
-        <label>Promoted</label>
+      <div>
+        <label className=" bg-black text-white">Promoted</label>
         <Card {...props} />
       </div>
     );

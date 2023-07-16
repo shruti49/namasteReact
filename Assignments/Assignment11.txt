@@ -9,3 +9,8 @@ Ans -
 
 Ques - If we don't pass a value to the provider does it take a default value?
 Ans -
+
+Ques - High Order Components
+Ans -
+
+Ques - Controlled and Uncontrolled Components
