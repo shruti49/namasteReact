@@ -28,4 +28,15 @@
 - Chunking
 - Lazy Loading
 - On demand Loading
-- Dynamic Import
+- Dynamic Import  
+- 
+
+
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux
+- Build our global,centralised store
+- Connect our store to our app
+- Create slice (cartSlice)
+- Dispatch actions on event handlers
+- Invoking reducers
+- Subscribing to store using selectornp
