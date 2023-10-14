@@ -10,19 +10,11 @@ const RestaurantMenu = () => {
 
   const [showIndex, setShowIndex] = useState(null);
 
-  const restInfo = useFetchRestaurantMenu(resId);
+  const { restInfo, restCategories } = useFetchRestaurantMenu(resId);
 
-  if (restInfo === null) return <Shimmer />;
+  if (restInfo === null && restCategories === null) return <Shimmer />;
 
-  const { name, cuisines, costForTwoMessage } =
-    restInfo?.cards[0]?.card?.card?.info;
-
-  const categories =
-    restInfo?.cards[2].groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
-      (c) =>
-        c.card?.["card"]?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-    );
+  const { name, cuisines, costForTwoMessage } = restInfo;
 
   return (
     <div className="text-center">
@@ -31,7 +23,7 @@ const RestaurantMenu = () => {
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
       <div>
-        {categories.map((category, index) => (
+        {restCategories.map((category, index) => (
           <RestaurantCategory
             data={category?.card?.card}
             key={category?.card?.card?.title}

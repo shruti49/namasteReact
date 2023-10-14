@@ -10,7 +10,6 @@ import PromotedHOC from "../../utils/PromotedHOC";
 import UserContext from "../context/UserContext";
 
 const Body = () => {
-
   //context
   const { loggedInUser, setUserName } = useContext(UserContext);
 
@@ -26,7 +25,7 @@ const Body = () => {
   // console.log(useState());
   const handleClick = () => {
     const filteredList = restaurantList.filter(
-      (resData) => resData.data.avgRating > 4
+      (resData) => resData.info.avgRating > 4
     );
     setFilteredRestaurant(filteredList);
   };
@@ -36,9 +35,14 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+
     //optional chaining
-    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
-    setRestaurantList(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurant(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setRestaurantList(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   useEffect(() => {
@@ -49,7 +53,7 @@ const Body = () => {
   const handleSearch = () => {
     if (searchedValue.length >= 2) {
       const filterBySearch = restaurantList.filter((resData) =>
-        resData.data.name.toLowerCase().includes(searchedValue.toLowerCase())
+        resData.info.name.toLowerCase().includes(searchedValue.toLowerCase())
       );
       setFilteredRestaurant(filterBySearch);
     }
@@ -65,14 +69,13 @@ const Body = () => {
     return <Shimmer />;
   }
 
-
-
   return (
     <div className="body">
       <div className="filter flex items-center">
         <div className="search m-4 p-4">
           <input
             type="text"
+            data-testid="searchInput"
             className="border border-black"
             value={searchedValue}
             onChange={(e) => setSearchedValue(e.target.value)}
@@ -104,14 +107,10 @@ const Body = () => {
       <div className="flex flex-wrap m-4">
         {filterdRestaurant.map((restaurant) => (
           <Link
-            to={`/restaurants/${restaurant.data.id}`}
-            key={restaurant.data.id}
+            to={`/restaurants/${restaurant.info.id}`}
+            key={restaurant.info.id}
           >
-            {restaurant.data.promoted ? (
-              <PromotedRestaurantCard resData={restaurant} />
-            ) : (
-              <RestaurantCard resData={restaurant} />
-            )}
+     <RestaurantCard resData={restaurant.info} />
           </Link>
         ))}
       </div>

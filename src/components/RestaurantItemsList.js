@@ -18,6 +18,7 @@ const RestaurantItemsList = ({ items }) => {
         return (
           <div
             key={id}
+            data-testid="foodItems"
             className="m-2 p-2 border-b-2 text-left flex justify-between items-center"
           >
             <div className="w-9/12">
